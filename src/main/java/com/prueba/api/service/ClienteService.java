@@ -8,13 +8,16 @@ import com.prueba.api.repository.ClienteRepository;
 import com.prueba.api.repository.PersonaRepository;
 import com.prueba.api.util.Constante;
 import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ClienteService {
 
+
     private final ClienteRepository clienteRepository;
     private final PersonaRepository personaRepository;
+
 
     public ClienteService(ClienteRepository clienteRepository, PersonaRepository personaRepository) {
         this.clienteRepository = clienteRepository;

@@ -4,6 +4,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Schema
 @Data
 @Entity(name="cliente")
@@ -19,6 +21,10 @@ public class Cliente {
     @OneToOne
     @JoinColumn(name="idPersona")
     Persona persona;
+    /*
+    @OneToMany
+    @JoinColumn(name="idCuenta")
+    List<Cuenta> cuenta*/
 
     private String contrasena;
     private int estado;

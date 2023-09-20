@@ -67,7 +67,18 @@ class ClienteServiceTest {
         Mockito.when(clienteRepository.save(Mockito.any(Cliente.class))).thenReturn(cliente);
         Cliente nuevoCliente = clienteService.crearCliente(clienteBean);
 
-        Mockito.verify(clienteRepository, Mockito.times(1)).save(cliente);
+        Mockito.verify(clienteRepository, Mockito.times(1)).save(cliente); // Estático
+        // Pruebas parametrizadas
+        // @Parametrized
+        // Insertar valores @csvSource
+
+        // Test Service (Pruebas unitarias)
+        // Test Controlador (levantar el servicio)
+        // Test para repository
+
+        // Modelo por capas
+        // Map struct - Conversion DTO a Model
+        // Utilizar Gradle .yml
 
         assertNotNull(nuevoCliente);
 

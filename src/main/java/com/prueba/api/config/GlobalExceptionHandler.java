@@ -1,5 +1,6 @@
 package com.prueba.api.config;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindException;
@@ -22,4 +23,5 @@ public class GlobalExceptionHandler {
                         .collect(Collectors.joining("\n"));
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorMessage);
     }
+
 }
